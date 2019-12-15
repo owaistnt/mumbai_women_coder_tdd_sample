@@ -2,6 +2,20 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:test_driven_app/mother_tongue_usecase.dart';
 
+/*Acceptance Criteria
+If User is have stayed in any non south Asian Countries then add English in their languages
+
+If User has stayed only in south Asian Countries then don't add anything.
+
+If User has stayed in any south Asian Countries only specifically in India then add Hindi.
+
+If User has stayed in any south Asian Countries only specifically in Pakistan or Afghanistan then add Urdu
+
+If User has stayed in any south Asian Country only specifically Bangladesh then insert Bangla
+
+If User has stayed in any non South Asian Countries but specifically China then add Chinese by default
+*/
+
 class MockRepo extends Mock implements ISouthAsianCountriesRepo {}
 
 MotherTongueUsecase usecase;
